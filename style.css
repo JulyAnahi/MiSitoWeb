@@ -1,61 +1,112 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    
 }
-body.inicio{
-    background-image: url(vista-superior-del-pirata-informatico-irreconocible-que-realiza-un-ciberataque-por-la-noche.jpg);
+
+/* =========== PÁGINA PRINCIPAL ========== */
+
+body.inicio {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
+    background-image: url('vista-superior-del-pirata-informatico-irreconocible-que-realiza-un-ciberataque-por-la-noche.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-family: 'Open Sans';
-
 }
 
-nav{
-    width: 100vw;
-    max-width: 100%;
-    position: fixed;
-    z-index: 2;
-    display: flex;
+/* Nav */
+nav {
+    width: 100%;
     background-color: rgb(21, 21, 99);
+    display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 30px;    
+    gap: 30px;
     height: 50px;
-       
-    
+    padding: 0 20px;
+    z-index: 2;
+    font-size: .6rem;
 }
-nav a{
-    color:rgb(116, 79, 250);
+
+nav a {
+    color: rgb(116, 79, 250);
     text-decoration: none;
-    
+    padding: 20px;
 }
-nav a:hover{
-    color:rgb(63, 247, 73)
+
+nav a:hover {
+    color: rgb(63, 247, 73);
 }
-footer{
+
+/* Main Index */
+main {
+    flex: 1;
     display: flex;
-    position: fixed;
-    bottom: 0;
-    color: aliceblue;
-    background-color: rgb(21, 21, 99);
-    width: 100%;
-    height: 50px;
-    flex-direction: row;
     justify-content: center;
-}
-p{
-    align-content: center;
+    align-items: center;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 3.5rem;
+}
+
+.acerca_btn {
+    background-color: rgb(7, 7, 7);
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.acerca_btn:hover {
+    transform: translateY(-10px);
+    background-color: rgb(21, 21, 99);
+    color: rgb(63, 247, 73);
+    border: 1px solid rgb(63, 247, 73);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(21, 21, 99);
+    color: aliceblue;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    width: 100%;
+}
+
+
+footer p{
+    align-content: center;
+    font-size: .6rem;
+}
+
+.header {
 top: 300px;
 right:50%;
-position:absolute;
+/* position:absolute; */
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -86,13 +137,15 @@ h1{
     background-color: rgb(21, 21, 99);
     color:rgb(63, 247, 73);
     border:1px solid rgb(63, 247, 73);
-
+    
 }
+/* =============ARCERCA DE ====================*/
+
 body.acercade {
-    background-color: rgb(21, 21, 99);
+    
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
-    color: aliceblue;
+    color: rgb(59, 59, 59);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -124,13 +177,92 @@ body.acercade {
     font-size: 1.1rem;
 }
 
-footer {
-    margin-top: auto; 
+/*================== CONTACTO ============== */
+
+.contacto{
+    overflow-y: scroll;
+    overflow-x: auto;
+    scrollbar-width: 3px;
+    scroll-padding: 2px;
+    font-size: .6rem;
+  
+}
+input{
+    height: 18px;
+    font-size:0.6rem ;
+}
+.contacto h2{
+    font-size: 2rem;
+}
+
+.form{
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(21, 21, 99);
-    height: 50px;
-    width: 100%;
-    color: aliceblue;
+    flex-direction: column;
+    max-width: 50%;
+    gap: 15px;
+    margin-top: 30px;
+    left: 20%;
+    color: #2e2d2df3;
+    
+}
+.element-form{
+    display: flex;
+    flex-direction: column;
+}
+.opciones {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.opciones label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.opciones input[type="radio"] {
+  margin-bottom: 5px;
+}
+label span{
+    font-size: small;
+    color:red;
+}
+p span{
+    font-size: small;
+    color:red;
+
+}
+form p{
+    font-size: 0.5rem;
+}
+button{
+    font-size: 0.6rem;
+}
+
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #000;
+    font-size: 0.8rem;
+}
+
+table th,
+table td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+table thead {
+    background-color: #151563;
+    color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
