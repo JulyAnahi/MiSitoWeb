@@ -184,7 +184,7 @@ body.acercade {
     overflow-x: auto;
     scrollbar-width: 3px;
     scroll-padding: 2px;
-    font-size: .6rem;
+    font-size: 1rem;
   
 }
 /* input{
@@ -193,6 +193,7 @@ body.acercade {
 } */
 .contacto h2{
     font-size: 2rem;
+    color: #343435;
 }
 
 .form{
@@ -237,14 +238,20 @@ p span{
 
 }
 form p{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }
 button{
-    font-size: 0.6rem;
+    font-size: 1rem;
+    background-color: #151563;
+    color:#fff;
+    border-radius: 4px;
+    width: 25%;
+    margin-top: 15px;
+    align-self: center;
 }
 
 table {
-    width: 90%;
+    width: 60%;
     margin: 40px auto;
     border-collapse: collapse;
     background-color: #fff;
@@ -259,7 +266,7 @@ table td {
     text-align: left;
 }
 table thead {
-    background-color: #151563;
+    background-color: #757579;
     color: #fff;
 }
 
